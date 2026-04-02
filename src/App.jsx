@@ -17,6 +17,9 @@ function App() {
 
     const [activeTab, setActiveTab] = useState('Models');
 
+    const [carts, setCarts] = useState([]);
+    console.log([carts]);
+
     return (
         <>
             <Navbar />
@@ -25,13 +28,13 @@ function App() {
             {/* tabs */}
             <div className='tabs tabs-box justify-center bg-transparent'>
                 <input type="radio" name="my_tabs_1" className='tab rounded-full w-34' aria-label="Models" defaultChecked onClick={() => setActiveTab('Models')} />
-                <input type="radio" name="my_tabs_1" className='tab rounded-full w-34' aria-label="Cart" onClick={() => setActiveTab('Cart')} />
+                <input type="radio" name="my_tabs_1" className='tab rounded-full w-34' aria-label={`Carts (${carts.length})`} onClick={() => setActiveTab('Cart')} />
             </div>
 
             <Suspense fallback={<div className='flex mx-auto justify-center items-center h-40 loading loading-dots loading-xl text-4xl'></div>}>
-                {activeTab === 'Models' && <Models modelPromoise={modelPromoise} />}
+                {activeTab === 'Models' && <Models modelPromoise={modelPromoise} carts={carts} setCarts={setCarts} />}
 
-                {activeTab === 'Cart' && <Cart />}
+                {activeTab === 'Cart' && <Cart carts={carts} setCarts={setCarts} />}
             </Suspense>
 
 

@@ -1,10 +1,15 @@
 import React, { useState } from 'react';
 
-const ModelCard = ({ model }) => {
+const ModelCard = ({ model,carts, setCarts }) => {
     const [isSubscribed, setIsSubscribed] = useState(false);
 
     const handleSubscription = () => {
         setIsSubscribed(true);
+
+        const isFound = carts.find((cart) => cart.id === model.id);
+        if (isFound) return;
+
+        setCarts([...carts, model]);
     };
 
     return (
@@ -22,8 +27,8 @@ const ModelCard = ({ model }) => {
                     <div onClick={handleSubscription} className=''>
                         {
                             isSubscribed 
-                            ? <button className="btn bg-linear-to-r from-purple-400 via-pink-400 to-fuchsia-500 w-full rounded-lg">Subscribed</button>
-                            : <button className="btn bg-linear-to-r from-red-400 via-orange-400 to-amber-400 w-full rounded-lg">Subscribe Now</button>
+                            ? <button className="btn btn-disabled border-none bg-linear-to-l from-zinc-300  to-base-300 w-full rounded-lg">Subscribed</button>
+                            : <button className="btn bg-linear-to-r from-red-400 via-orange-400 to-amber-400 w-full rounded-lg transition-all duration-300 ease-out hover:scale-102 ">Subscribe Now</button>
                         }
                     </div>
                 </div>

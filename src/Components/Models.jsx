@@ -1,7 +1,7 @@
 import React, { use, useState } from 'react';
 import ModelCard from './ModelCard';
 
-const Models = ({ modelPromoise }) => {
+const Models = ({ modelPromoise, carts, setCarts }) => {
     const models = use(modelPromoise);
 
     return (
@@ -13,7 +13,7 @@ const Models = ({ modelPromoise }) => {
 
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-6 md:mt-12'>
                 {
-                    models.map((model) => <ModelCard key={model.id} model={model} />)
+                    models.map((model) => <ModelCard key={model.id} model={model} carts={carts} setCarts={setCarts}  />)
                 }
             </div>
 
