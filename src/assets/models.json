@@ -3,7 +3,7 @@
         "id": 1,
         "title": "ChatGPT",
         "description": "The world's most popular AI assistant by OpenAI.\nVersatile for writing, coding, reasoning, and creative tasks.",
-        "price": 20,
+        "price": 11,
         "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/ChatGPT_logo.svg/1200px-ChatGPT_logo.svg.png",
         "status": "popular"
     },
@@ -11,7 +11,7 @@
         "id": 2,
         "title": "Grok",
         "description": "Built by xAI with real-time knowledge from X.\nHelpful, witty, and maximally truth-seeking AI.",
-        "price": 30,
+        "price": 39,
         "image": "https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/grok-icon.png",
         "status": "favourite"
     },
@@ -27,7 +27,7 @@
         "id": 4,
         "title": "Gemini",
         "description": "Google's advanced multimodal AI.\nDeep integration with Google ecosystem and strong reasoning.",
-        "price": 20,
+        "price": 86,
         "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Google_Gemini_logo.svg/1200px-Google_Gemini_logo.svg.png",
         "status": "popular"
     },
@@ -35,7 +35,7 @@
         "id": 5,
         "title": "Claude",
         "description": "Anthropic's thoughtful and safe AI model.\nBest for long-context writing, analysis, and coding.",
-        "price": 20,
+        "price": 99,
         "image": "https://static.vecteezy.com/system/resources/thumbnails/067/941/712/small_2x/claude-ai-logo-rounded-hd-free-png.png",
         "status": "favourite"
     },
@@ -51,7 +51,7 @@
         "id": 7,
         "title": "Perplexity",
         "description": "AI-powered search engine with real-time web access.\nDelivers accurate answers with sources.",
-        "price": 20,
+        "price": 45,
         "image": "https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/perplexity-ai-icon.png",
         "status": "popular"
     },
@@ -59,7 +59,7 @@
         "id": 8,
         "title": "Mistral",
         "description": "European AI company known for efficient models.\nStrong performance in coding and multilingual tasks.",
-        "price": 20,
+        "price": 14,
         "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Mistral_AI_logo_%282025%E2%80%93%29.svg/1280px-Mistral_AI_logo_%282025%E2%80%93%29.svg.png",
         "status": "favourite"
     },
@@ -67,7 +67,7 @@
         "id": 9,
         "title": "Meta AI",
         "description": "Meta's powerful Llama-based AI assistant.\nIntegrated across WhatsApp, Instagram, and Facebook.",
-        "price": 0,
+        "price": 69,
         "image": "https://brandlogos.net/wp-content/uploads/2025/08/meta_ai-logo_brandlogos.net_xjwry.png",
         "status": "popular"
     },
