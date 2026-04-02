@@ -1,42 +1,29 @@
-import { Suspense, useState } from 'react'
+import { useState } from 'react'
 import './App.css'
 import Navbar from './Components/Navbar'
 import Banner from './Components/Banner'
 import Footer from './Components/Footer'
 import Models from './Components/Models'
 import Cart from './Components/Cart'
-
-const getModels = async () => {
-    const res = await fetch('/src/assets/models.json');
-    return res.json();
-}
+import modelsData from './assets/models.json'
 
 function App() {
-    // since modelPromise called here, so use suspense; but caller outside App(), don't need to use suspense
-    const modelPromoise = getModels();
-
+    const models = modelsData;
     const [activeTab, setActiveTab] = useState('Models');
-
     const [carts, setCarts] = useState([]);
-    console.log([carts]);
 
     return (
         <>
             <Navbar />
             <Banner />
 
-            {/* tabs */}
             <div className='tabs tabs-box justify-center bg-transparent'>
-                <input type="radio" name="my_tabs_1" className='tab rounded-full w-34' aria-label="Models" defaultChecked onClick={() => setActiveTab('Models')} />
-                <input type="radio" name="my_tabs_1" className='tab rounded-full w-34' aria-label={`Carts (${carts.length})`} onClick={() => setActiveTab('Cart')} />
+                <input type='radio' name='my_tabs_1' className='tab rounded-full w-34' aria-label='Models' defaultChecked onClick={() => setActiveTab('Models')} />
+                <input type='radio' name='my_tabs_1' className='tab rounded-full w-34' aria-label={`Carts (${carts.length})`} onClick={() => setActiveTab('Cart')} />
             </div>
 
-            <Suspense fallback={<div className='flex mx-auto justify-center items-center h-40 loading loading-dots loading-xl text-4xl'></div>}>
-                {activeTab === 'Models' && <Models modelPromoise={modelPromoise} carts={carts} setCarts={setCarts} />}
-
-                {activeTab === 'Cart' && <Cart carts={carts} setCarts={setCarts} />}
-            </Suspense>
-
+            {activeTab === 'Models' && <Models models={models} carts={carts} setCarts={setCarts} />}
+            {activeTab === 'Cart' && <Cart carts={carts} setCarts={setCarts} />}
 
             <Footer />
         </>

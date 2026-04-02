@@ -1,3 +1,5 @@
+import banner from '../assets/banner.png';
+
 const Banner = () => {
     return (
         <div className="relative min-h-screen flex items-center overflow-hidden p-7 md:p-10 lg:p-0">
@@ -37,7 +39,7 @@ const Banner = () => {
                 {/* Right Image */}
                 <div className="flex justify-center lg:justify-end">
                     <div className="">
-                        <img className="h-90 md:h-128 w-auto object-contain drop-shadow-2xl rounded-3xl animate-pulse" src="/src/assets/banner.png" alt="AI Models Banner" />
+                        <img className="h-90 md:h-128 w-auto object-contain drop-shadow-2xl rounded-3xl animate-pulse" src={banner} alt="AI Models Banner" />
                     </div>
                 </div>
             </div>

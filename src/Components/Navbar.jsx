@@ -1,9 +1,11 @@
+import logo from '../assets/logo.png';
+
 const NavBar = () => {
     return (
         <div className="navbar mx-auto w-11/12 md:w-10/12">
             <div className="navbar-start">
                 <div className="flex items-center gap-1 font-bold text-xl">
-                    <img className="w-10" src="/src/assets/logo.png" /> Ai Hub
+                    <img className="w-10" src={logo} alt="AI Hub Logo" /> Ai Hub
                 </div>
             </div>
             <div className="navbar-center hidden md:flex">

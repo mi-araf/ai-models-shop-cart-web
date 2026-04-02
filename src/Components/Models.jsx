@@ -1,8 +1,7 @@
-import React, { use, useState } from 'react';
+import React from 'react';
 import ModelCard from './ModelCard';
 
-const Models = ({ modelPromoise, carts, setCarts }) => {
-    const models = use(modelPromoise);
+const Models = ({ models, carts, setCarts }) => {
 
     return (
         <div className='py-8 mx-auto w-11/12 md:w-10/12 mb-20'>

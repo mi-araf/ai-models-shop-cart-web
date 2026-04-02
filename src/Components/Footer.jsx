@@ -1,3 +1,5 @@
+import logo from '../assets/logo.png';
+
 const Footer = () => {
     return (
         <footer className="bg-zinc-950 border-t border-red-900/50 pt-16 pb-10">
@@ -7,7 +9,7 @@ const Footer = () => {
                     {/* Logo & Description */}
                     <div className="md:col-span-5">
                         <div className="flex items-center gap-3 mb-6">
-                            <img src="/src/assets/logo.png" alt="AI Hub Logo" className="h-10 w-auto" />
+                            <img src={logo} alt="AI Hub Logo" className="h-10 w-auto" />
                             <h2 className="text-3xl font-bold tracking-tighter text-white">
                                 AI Hub
                             </h2>
